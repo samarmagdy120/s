@@ -21,6 +21,8 @@
     "react-images-upload": "^1.2.8",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-star-picker": "^2.0.5",
+    "react-star-rating-component": "^1.4.1",
     "react-use": "^17.2.4",
     "web-vitals": "^0.2.4"
   },

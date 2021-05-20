@@ -14,6 +14,11 @@ export default (state, action) => {
       return {
         errors: action.payload,
       };
+     case ADD_REVIEW_SUCCESS:
+       return{
+       ...state,
+       loading : true
+     } 
     default:
       return state;
   }

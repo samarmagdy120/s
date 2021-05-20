@@ -22,8 +22,8 @@ import Profile from "./Components/profile/Profile";
 
 function App() {
   // useEffect(() => {
-  //   // const isAuth = async () => {
-  //   let token = localStorage.token;
+  //   const isAuth = async () => {
+  //   let token = await localStorage.token;
   //   // console.log(token)
   //   if (token) {
   //     setAuthToken(token);
@@ -31,8 +31,8 @@ function App() {
   //   } else {
   //     console.log("is not Authed");
   //   }
-  //   // }
-  //   // isAuth().then(()=>console.log(''))
+  //   }
+  //   isAuth()
   // }, []);
 
   return (

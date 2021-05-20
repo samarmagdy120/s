@@ -3,11 +3,13 @@ import { Modal, Button } from "react-bootstrap";
 import { ImWhatsapp } from "react-icons/im";
 import { Link } from "react-router-dom";
 
-const Modell = () => {
+const Modell = ({phone}) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const url =`https://wa.me/+02`
+  console.log(`${url}${phone}`);
   return (
     <>
       <ImWhatsapp
@@ -41,7 +43,7 @@ const Modell = () => {
             رفض
           </Button>
           <Button variant="primary">
-            <Link style={{ color: "#FFF", textDecoration: "none" }}>اكمال</Link>
+            <a href={`${url}${phone}`} target="_blank" style={{ color: "#FFF", textDecoration: "none" }}>اكمال</a>
           </Button>
         </Modal.Footer>
       </Modal>

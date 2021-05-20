@@ -11,6 +11,7 @@ import {
 } from "react-bootstrap";
 import "./Services.css";
 import { Link } from "react-router-dom";
+import Loader from '../Loader';
 
 const url = "https://services-works.herokuapp.com/api/jobs";
 
@@ -35,7 +36,8 @@ const Services = () => {
       </Jumbotron>
       <div className="work">
         <div className="container">
-          {jobs.map((item) => {
+          {jobs.length >0 ?
+          jobs.map((item) => {
             return (
               <div className="product">
                 <div className="imgbox">
@@ -51,7 +53,7 @@ const Services = () => {
                 </div>
               </div>
             );
-          })}
+          }):<Loader />}
         </div>
       </div>
     </React.Fragment>

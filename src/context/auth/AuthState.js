@@ -39,12 +39,12 @@ const AuthState = (props) => {
 
    const getUserData=async()=>{
     const config = {
-      header: {
-        "Authorization": "Bearer "+ localStorage.token,
+      headers: {
+        Authorization: `Bearer ${localStorage.token}`     
       },
     }; 
     try {
-      const res = await axios.get(`${url}//user`,config);
+      const res = await axios.get(`${url}/user`,config);
       console.log(res); 
       dispatch({
         type :LOAD_USER_SUCCESS,
@@ -122,7 +122,6 @@ const AuthState = (props) => {
         type: SUCCESS_LOGIN,
         payload: res.data,
       });
-      getUserData()
     } catch (err) {
       dispatch({
         type: FAIL_LOGIN,
@@ -150,8 +149,8 @@ const AuthState = (props) => {
     const formdata = new FormData();
     formdata.append('image',image)
     const config = {
-      header: {
-        "Authorization": "Bearer "+ localStorage.token,
+      headers: {
+        Authorization: 'Bearer ' + localStorage.token,
         'Content-Type': 'multipart/form-data',
       },
     }; 

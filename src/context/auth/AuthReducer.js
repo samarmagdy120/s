@@ -11,7 +11,8 @@ import {
   RETURN_SECCESS,
   PROFILE_DATA_SUCCESS,
   PROFILE_DATA_FAIL,
-  USER_LOGOUT 
+  USER_LOGOUT,
+  ADD_PROFILE_IMAGE_SUCCES 
 } from "../types";
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -78,6 +79,9 @@ export default (state, action) => {
       ...state,
       success : false,
       errors : action.payload  
+  }
+  case ADD_PROFILE_IMAGE_SUCCES : return{
+    success : true
   }
     case USER_LOGOUT :
       localStorage.removeItem("token");
